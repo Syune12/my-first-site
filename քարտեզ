@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Իմ քարտեզային նախագիծ</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    #map {
+      height: 400px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🌍 Իմ քարտեզային կայքը</h1>
+
+<p>
+Սա իմ առաջին կայքն է, որտեղ օգտագործում եմ Leaflet քարտեզ։
+</p>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // քարտեզի ստեղծում
+  var map = L.map('map').setView([40.1792, 44.4991], 13); // Երևան
+
+  // քարտեզի շերտ
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+
+  // marker
+  L.marker([40.1792, 44.4991]).addTo(map)
+    .bindPopup("📍 Երևան")
+    .openPopup();
+</script>
+
+</body>
+</html>
