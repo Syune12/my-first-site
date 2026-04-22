@@ -20,6 +20,26 @@
       color: #2c3e50;
     }
 
+    nav {
+      background: #2c3e50;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      margin-top: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+    }
+
     #map {
       height: 400px;
       margin-top: 20px;
@@ -27,29 +47,50 @@
     }
   </style>
 </head>
+
 <body>
+
+<!-- 🟢 ՄԵՆՅՈՒ -->
+<nav>
+  <a href="#water">🌊 Ջրային ռեսուրսներ</a>
+  <a href="#biodiversity">🌿 Կենսաբազմազանություն</a>
+  <a href="#map">🗺 Քարտեզ</a>
+</nav>
 
 <h1>🌍 Իմ քարտեզային կայքը</h1>
 
-<p>
-Սա իմ առաջին կայքն է, որտեղ օգտագործում եմ Leaflet քարտեզ։
-</p>
+<!-- 🟢 ԲԱԺԻՆ 1 -->
+<section id="water">
+  <h2>🌊 Ջրային ռեսուրսների պահպանություն</h2>
+  <p>
+    Ջուրը շատ կարևոր բնական ռեսուրս է։ Պետք է խնայել և չաղտոտել այն։
+  </p>
+</section>
 
-<div id="map"></div>
+<!-- 🟢 ԲԱԺԻՆ 2 -->
+<section id="biodiversity">
+  <h2>🌿 Կենսաբազմազանության պահպանություն</h2>
+  <p>
+    Բնության և կենդանիների պաշտպանությունը կարևոր է մեր մոլորակի համար։
+  </p>
+</section>
+
+<!-- 🟢 ՔԱՐՏԵԶ -->
+<section id="map">
+  <h2>🗺 Քարտեզ</h2>
+  <div id="map"></div>
+</section>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  // քարտեզի ստեղծում
-  var map = L.map('map').setView([40.1792, 44.4991], 13); // Երևան
+  var map = L.map('map').setView([40.1792, 44.4991], 13);
 
-  // քարտեզի շերտ
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // marker
   L.marker([40.1792, 44.4991]).addTo(map)
     .bindPopup("📍 Երևան")
     .openPopup();
