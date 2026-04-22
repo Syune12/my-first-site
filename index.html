@@ -92,153 +92,19 @@
   </p>
 
   <h3>🐻 Հայկական կարպի</h3>
- <!DOCTYPE html>
-<html lang="hy">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Իմ քարտեզային նախագիծ</title>
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      padding: 20px;
-      background: #f2f2f2;
-    }
-
-    h1 {
-      color: #2c3e50;
-    }
-
-    nav {
-      background: #2c3e50;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      color: white;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      margin-top: 30px;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-    }
-
-    #map {
-      height: 400px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-
-<body>
-
-<!-- 🟢 ՄԵՆՅՈՒ -->
-<nav>
-  <a href="#water">🌊 Ջրային ռեսուրսներ</a>
-  <a href="#biodiversity">🌿 Բնություն</a>
-  <a href="#map">🗺 Քարտեզ</a>
-</nav>
-
-<h1>🌍 Իմ քարտեզային կայքը</h1>
-
-<!-- 🟢 ԲԱԺԻՆ 1 -->
-<section id="water">
-  <h2>🌊 Ջրային ռեսուրսների և ՀՀ գետերի պահպանություն</h2>
-  <p>
-    Հայաստանի գետերը կարևոր դեր ունեն բնության, գյուղատնտեսության և էներգետիկայի համար։
-    ՀՀ գետերի մեծ մասը պատկանում է Արաքսի և Կուրի ավազաններին։
-  </p>
-
-  <p>
-    Հայաստանի ամենամեծ գետը Արաքսն է, որը նաև սահմանային գետ է։
-    Նրա կարևոր վտակներն են Հրազդանը, Արփան, Որոտանը, Քասաղը և Ախուրյանը։
-  </p>
-
-  <p>
-    Այս գետերը սնվում են ձյան հալոցքից, անձրևներից և աղբյուրներից։
-    Գարնանը դրանք շատ ջրառատ են, իսկ ամռանը՝ ջրի քանակը նվազում է։
-  </p>
-
-  <p>
-    Գետերի պահպանությունը շատ կարևոր է՝
-    աղտոտումից խուսափելու, ջրի խնայման և էկոհամակարգերի պահպանման համար։
-  </p>
-</section>
-
-<!-- 🟢 ԲԱԺԻՆ 2 -->
-<section id="biodiversity">
-  <h2>🌿 Կենսաբազմազանության պահպանություն</h2>
-  <p>
-    ՀՀ բնության պահպանությունն ու կենսաբազմազանությունը կարևոր են էկոհամակարգի առողջության համար։
-    Հայաստանում պահպանվում են բազմաթիվ հազվադեպ ու եզակի կենդանիներ և բույսեր։
-  </p>
-
-  <h3>🐻 Հայկական կարպի</h3>
- <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Brown_bear_%28Ursus_arctos_arctos%29.jpg" width="300">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Carp_image.jpg/800px-Carp_image.jpg" alt="Հայկական կարպ" width="300">
   <p>
     Հայկական կարպը (Cyprinus carpio) հանդիպում է տարբեր ջրերում։ Հայկական բնություն պահպանելու համար կարևոր է կանխարգելել դրանց վերացումը։
   </p>
 
   <h3>🦅 Հայկական վահանապնյակ</h3>
- <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Golden_eagle_in_flight_-_5.jpg" width="300">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Golden_eagle_in_flight.jpg/800px-Golden_eagle_in_flight.jpg" alt="Հայկական վահանապնյակ" width="300">
   <p>
     Հայկական վահանապնյակը (Aquila chrysaetos) Հայաստանի ամենամեծ և հազվադեպ թռչուններից է։ Նաերը որսում են ցլաքթորներ, ինչպես նաև փոքր կրծողներ։
   </p>
 
   <h3>🌸 Հայկական լեռնաշատ բույսեր</h3>
- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Mountain_plants.jpg" width="300">
-  <p>
-    ՀՀ լեռներում և անտառներում աճում են բազմաթիվ բույսեր, որոնք յուրահատուկ են ոչ միայն Հայաստանի համար, այլև ամբողջ տարածաշրջանի համար։
-  </p>
-</section>
-
-<!-- 🟢 ՔԱՐՏԵԶ -->
-<section id="map">
-  <h2>🗺 Քարտեզ</h2>
-  <div id="map"></div>
-</section>
-
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-<script>
-  var map = L.map('map').setView([40.1792, 44.4991], 13);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap'
-  }).addTo(map);
-
-  L.marker([40.1792, 44.4991]).addTo(map)
-    .bindPopup("📍 Երևան")
-    .openPopup();
-</script>
-
-</body>
-</html>
-  <p>
-    Հայկական կարպը (Cyprinus carpio) հանդիպում է տարբեր ջրերում։ Հայկական բնություն պահպանելու համար կարևոր է կանխարգելել դրանց վերացումը։
-  </p>
-
-  <h3>🦅 Հայկական վահանապնյակ</h3>
- <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Golden_eagle_in_flight_-_5.jpg" width="300">
-  <p>
-    Հայկական վահանապնյակը (Aquila chrysaetos) Հայաստանի ամենամեծ և հազվադեպ թռչուններից է։ Նաերը որսում են ցլաքթորներ, ինչպես նաև փոքր կրծողներ։
-  </p>
-
-  <h3>🌸 Հայկական լեռնաշատ բույսեր</h3>
- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Mountain_plants.jpg" width="300">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Armenian_Mountain_Herbs.jpg/800px-Armenian_Mountain_Herbs.jpg" alt="Հայկական լեռնաշատ բույսեր" width="300">
   <p>
     ՀՀ լեռներում և անտառներում աճում են բազմաթիվ բույսեր, որոնք յուրահատուկ են ոչ միայն Հայաստանի համար, այլև ամբողջ տարածաշրջանի համար։
   </p>
