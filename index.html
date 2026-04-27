@@ -142,6 +142,9 @@
   L.marker([40.1792, 44.4991]).addTo(map)
     .bindPopup("📍 Երևան")
     .openPopup();
+  setTimeout(function () {
+  map.invalidateSize();
+}, 200);
 </script>
 
 </body>
