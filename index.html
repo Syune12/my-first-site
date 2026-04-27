@@ -47,20 +47,22 @@
       border-radius: 10px;
     }
 .hero {
-  height: 400px;
-  width:100%;
-  margin: 0; 
+  height: 60vh; /* էկրանի կեսից քիչ ավելի */
   display: flex;
   justify-content: center;
   align-items: center;
-  color:  white; 
   text-align: center;
-  background-image: url("Location_map_of_Armenia_with_Artsakh.png");
-  background-size:contain;
+  color: white;
+
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url("Location_map_of_Armenia_with_Artsakh.png");
+
+  background-size: contain;   /* ամբողջ քարտեզը երևա */
   background-repeat: no-repeat;
-  background-color: #000;
   background-position: center;
- }
+  background-color: #000;
+}
 </style>
 </head>
 
