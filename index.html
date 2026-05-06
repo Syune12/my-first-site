@@ -140,14 +140,14 @@
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  var map = L.map('map').setView([40.1792, 44.4991], 13);
+  var map = L.map('map').setView([39.157322, 46.116828], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  L.marker([40.1792, 44.4991]).addTo(map)
-    .bindPopup("📍 Երևան")
+  L.marker([39.157322, 46.116828]).addTo(map)
+    .bindPopup("📍 Ողջի")
     .openPopup();
   setTimeout(function () {
   map.invalidateSize();
