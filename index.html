@@ -135,40 +135,50 @@
   <h2>🗺 Քարտեզ</h2>
   <div id="map"></div>
 </section>
-<!-- 🟢 ԳՈՎԱԶԴԱՅԻՆ ԲԱԺԻՆ -->
-<section id="ads">
-  <h2>🪴 Սենյակային բույսերի վաճառք</h2>
+/* 🟢 ԳՈՎԱԶԴԱՅԻՆ ԲԱԺԻՆ */
+#ads {
+  margin-top: 30px;
+}
 
-  <div class="plant-ad">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Sansevieria_trifasciata.jpg" 
-         alt="Սանսևերիա">
+.plant-ad {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f5fff5;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-    <div class="plant-text">
-      <h3>🌿 Սանսևերիա</h3>
-      <p>
-        Գեղեցիկ և հեշտ խնամվող սենյակային բույս։
-        Մաքրում է օդը և հարմար է տան ու գրասենյակի համար։
-      </p>
+.plant-ad img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
-      <button>Գնել հիմա</button>
-    </div>
-  </div>
+.plant-text h3 {
+  color: #2e7d32;
+}
 
-  <div class="plant-ad">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Aloe_vera_flower.jpg" 
-         alt="Ալոե Վերա">
+.plant-text p {
+  color: #444;
+}
 
-    <div class="plant-text">
-      <h3>🌱 Ալոե Վերա</h3>
-      <p>
-        Բուժիչ հատկություններով հայտնի բույս,
-        որը սիրում է արև և քիչ ջուր։
-      </p>
+.plant-text button {
+  background: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-      <button>Պատվիրել</button>
-    </div>
-  </div>
-</section>
+.plant-text button:hover {
+  background: #2e7d32;
+}
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
