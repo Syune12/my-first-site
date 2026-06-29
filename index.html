@@ -53,7 +53,6 @@
       background-color:#eaf6ea;
     }
 
-    /* MAP + SIDE PANEL */
     #map-section {
       display: flex;
       gap: 15px;
@@ -144,22 +143,36 @@
       `<h4>${title}</h4><p>${text}</p>`;
   }
 
-  function addMarker(lat, lng, title, text) {
-    L.marker([lat, lng]).addTo(map)
+  function addMarker(lat, lng, title, text, color = "blue") {
+    var icon = L.icon({
+      iconUrl: `https://maps.google.com/mapfiles/ms/icons/${color}-dot.png`,
+      iconSize: [32, 32]
+    });
+
+    L.marker([lat, lng], { icon: icon }).addTo(map)
       .bindPopup(title)
       .on('click', function () {
         showInfo(title, text);
       });
   }
 
+  // 🔵 սովորական կետեր
   addMarker(39.157322, 46.116828, "📍 Ողջի",
-    "Սյունիքի կարևոր գետերից է, ունի էկոլոգիական խնդիրներ։");
+    "Սյունիքի կարևոր գետերից է։");
 
   addMarker(39.149698, 46.099620, "📍 Քաջարանց",
-    "Տարածք Սյունիքում, հանքարդյունաբերական ազդեցությամբ։");
+    "Տարածք Սյունիքում։");
 
   addMarker(39.155513, 46.093718, "📍 Կապուտջուղ",
     "Հայաստանի բարձր լեռներից մեկը։");
+
+  // 🔴 ԱՂՏՈՏՎԱԾ ՈՂՋԻ
+  addMarker(
+    39.229574, 46.122919,
+    "⚠️ Ողջի գետ – 5-րդ դաս",
+    "Քաջարան քաղաքում Ողջի գետի ջրերի որակը դասվում է 5-րդ դասի։ Պատճառը ծանր մետաղների բարձր պարունակությունն է՝ Mn (մանգան), Mo (մոլիբդեն), Mg (մագնեզիում), Cu (պղինձ), Sn (անագ) և այլ տարրեր։ Սա լուրջ էկոլոգիական խնդիր է։",
+    "red"
+  );
 
   addMarker(39.200428, 46.255468, "📍 Գեղի",
     "Լեռնային գոտի։");
