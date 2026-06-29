@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Իմ քարտեզային նախագիծ</title>
 
-  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
   <style>
@@ -16,9 +15,7 @@
       background: #eaf6ea;
     }
 
-    h1 {
-      color: #8b74db;
-    }
+    h1 { color: #8b74db; }
 
     nav {
       background: #2c3e50;
@@ -40,131 +37,99 @@
       border-radius: 10px;
     }
 
+    .hero {
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+        url("Location_map_of_Armenia_with_Artsakh.png");
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-position: center;
+      background-color:#eaf6ea;
+    }
+
+    /* MAP + SIDE PANEL */
+    #map-section {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
     #map {
       height: 400px;
-      width:100%;
-      margin-top: 20px;
+      width: 70%;
       border-radius: 10px;
     }
-.hero {
-  height: 60vh; /* էկրանի կեսից քիչ ավելի */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
 
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), 
-    url("Location_map_of_Armenia_with_Artsakh.png");
+    #sidePanel {
+      width: 30%;
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-  background-size: contain;   /* ամբողջ քարտեզը երևա */
-  background-repeat: repeat-x;
-  background-position: center;
-  background-color:#eaf6ea;
-}
-</style>
+    #infoContent {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 
 <body>
+
 <header class="hero">
-  <h1>🌍 Իմ առաջին. քարտեզային կայքը</h1>
+  <h1>🌍 Իմ առաջին քարտեզային կայքը</h1>
 </header>
-<!-- 🟢 ՄԵՆՅՈՒ -->
+
 <nav>
   <a href="#water">🌊 Ջրային ռեսուրսներ</a>
   <a href="#biodiversity">🌿 Բնություն</a>
-  <a href="#ranger">👨‍🌿 Բնապահպանի պարտականությունները</a>
+  <a href="#ranger">👨‍🌿 Բնապահպան</a>
   <a href="#map-section">🗺 Քարտեզ</a>
 </nav>
 
-<!-- 🟢 ԲԱԺԻՆ 1 -->
 <section id="water">
-  <h2>🌊 Ջրային ռեսուրսների և ՀՀ գետերի պահպանություն</h2>
-  <p>
-    Հայաստանի գետերը կարևոր դեր ունեն բնության, գյուղատնտեսության և էներգետիկայի համար։
-    ՀՀ գետերի մեծ մասը պատկանում է Արաքսի և Կուրի ավազաններին։
-  </p>
-
-  <p>
-    Հայաստանի ամենամեծ գետը Արաքսն է, որը նաև սահմանային գետ է։
-    Նրա կարևոր վտակներն են Հրազդանը, Արփան, Որոտանը, Քասաղը և Ախուրյանը։
-  </p>
-
-  <p>
-    Այս գետերը սնվում են ձյան հալոցքից, անձրևներից և աղբյուրներից։
-    Գարնանը դրանք շատ ջրառատ են, իսկ ամռանը՝ ջրի քանակը նվազում է։
-  </p>
-
-  <p>
-    Գետերի պահպանությունը շատ կարևոր է՝
-    աղտոտումից խուսափելու, ջրի խնայման և էկոհամակարգերի պահպանման համար։
-  </p>
-  <p>
-    Սյունիքում` Կապան և Քաջարան քաղաքների միջով է անցնում Ողջի գետը: Ողջի գետն ունի բազմաթիվ վտակներ: Ողջի գետի որակը, մինչև Քաջարան քաղաք` դասվում է Ողջի գետի 3-րդ դասին համապատասխան որակի, սակայն հանքարդյունաբերության ազդեցությամբ պայմանավորված` գետի ջուրը Կապան և Քաջարան քաղաքներում հասնում է մինչև 5-րդ դասի: Գետի ջրի որակի փոփոխությունը հիմնականում պայմանավվորված է ծանր մետաղներով:
-  </p>
+  <h2>🌊 Ջրային ռեսուրսներ</h2>
+  <p>... քո տեքստը ...</p>
 </section>
 
-<!-- 🟢 ԲԱԺԻՆ 2 -->
 <section id="biodiversity">
-  <h2>🌿 Կենսաբազմազանության պահպանություն</h2>
-  <p>
-    ՀՀ բնության պահպանությունն ու կենսաբազմազանությունը կարևոր են էկոհամակարգի առողջության համար։
-    Հայաստանում պահպանվում են բազմաթիվ հազվադեպ ու եզակի կենդանիներ և բույսեր։
-  </p>
+  <h2>🌿 Բնություն</h2>
+  <p>... քո տեքստը ...</p>
+</section>
 
-  <h3>🐻 Հայկական կարպի կամ սովորական ծածան</h3>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Carp_image.jpg/800px-Carp_image.jpg" alt="Հայկական կարպ" width="300">
-  <p>
-    Հայկական կարպը (Cyprinus carpio) հանդիպում է տարբեր ջրերում։ Հայկական բնություն պահպանելու համար կարևոր է կանխարգելել դրանց վերացումը։ Արտաքին տեսքը` մարմինը հաստ է, ծածկված մեծ թեփուկներով, ունի 3-4 մեջքային փշիկ: Վայրի տեսակները (Սազան) հիմնականում լինում են գորշ կանաչավուն: 
-  </p>
-
-  <h3>🦅 Տափաստանային արծիվ</h3>
-  <img src="տափաստանային արծիվ.jpg" alt="Տափաստանային արծիվ" width="300">
-  <p>
-    Տափաստանային արծիվը մուգ փետուրներով խոշոր արծիվ է։ Կտուցը շատ մեծ է և մուգ, ոտքերը փետրավորված են մինչև մատների ծայրը: Ծոծրակում  հաճախ կարելի է հանդիպել ժանգաշիկագույն հատված: Երիտասարդ թռչունները բաց գորշագույն են` մուգ կետիկներով:
-  </p>
-
-  <h3>🌸 Հայկական լեռնաշատ բույսեր</h3>
- <img src="images.webp" alt="Հայկական լեռնաշատ բույսեր" width="300"height="200">
-  <p>
-    ՀՀ լեռներում և անտառներում աճում են բազմաթիվ բույսեր, որոնք յուրահատուկ են ոչ միայն Հայաստանի համար, այլև ամբողջ տարածաշրջանի համար։
-  </p>
-  <!-- 🟢 ԲԱԺԻՆ 3 -->
 <section id="ranger">
   <h2>👨‍🌿 Բնապահպանի պարտականությունները</h2>
-
-  <p>
-    Բնապահպանը պատասխանատու է բնության, կենդանական և բուսական աշխարհի պահպանության համար։
-    Նրա հիմնական նպատակն է պաշտպանել շրջակա միջավայրը և ապահովել բնական ռեսուրսների ճիշտ օգտագործումը։
-  </p>
-
   <ul>
-    <li>🌿 Պահպանել անտառները, գետերը և լճերը։</li>
-    <li>🦌 Պաշտպանել վայրի կենդանիներին և բույսերը։</li>
-    <li>🚯 Կանխել շրջակա միջավայրի աղտոտումը։</li>
-    <li>🔥 Կանխարգելել անտառային հրդեհները և ապօրինի ծառահատումները։</li>
-    <li>💧 Վերահսկել ջրային ռեսուրսների մաքրությունը։</li>
-    <li>📋 Իրականացնել բնապահպանական մշտադիտարկում և ստուգումներ։</li>
-    <li>📚 Տեղեկացնել բնակչությանը բնության պահպանության կարևորության մասին։</li>
-    <li>♻️ Խրախուսել աղբի տեսակավորումը և վերամշակումը։</li>
+    <li>🌿 Պահպանել անտառները</li>
+    <li>🦌 Պաշտպանել կենդանիներին</li>
+    <li>🚯 Կանխել աղտոտումը</li>
+    <li>🔥 Կանխել հրդեհները</li>
+    <li>💧 Վերահսկել ջրերը</li>
+    <li>♻️ Խրախուսել վերամշակումը</li>
   </ul>
-
-  <p>
-    <strong>«Բնությունը մեր տունն է, և նրա պահպանումը յուրաքանչյուրիս պարտականությունն է»։</strong>
-  </p>
 </section>
-<!-- 🟢 ՔԱՐՏԵԶ -->
+
 <section id="map-section">
   <h2>🗺 Քարտեզ</h2>
+
   <div id="map"></div>
+
   <div id="sidePanel">
-  <h3>📍 Տեղեկություն</h3>
-  <div id="infoContent">
-    Սեղմիր քարտեզի վրա որևէ կետի վրա՝ մանրամասներ տեսնելու համար։
+    <h3>📍 Տեղեկություն</h3>
+    <div id="infoContent">
+      Սեղմիր քարտեզի վրա որևէ կետի վրա։
+    </div>
   </div>
-</div>
 </section>
+
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
@@ -174,30 +139,43 @@
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  L.marker([39.157322, 46.116828]).addTo(map)
-    .bindPopup("📍 Ողջի")
-    .openPopup( );
-    L.marker([39.149698, 46.099620]).addTo(map)
-    .bindPopup("📍 Քաջարանց")
-    .openPopup();
-   L.marker([39.155513, 46.093718]).addTo(map)
-    .bindPopup("📍 Կապուտջուղ")
-    .openPopup();
-   L.marker([39.200428, 46.255468]).addTo(map)
-    .bindPopup("📍 Գեղի")
-    .openPopup();
-   L.marker([39.238592, 46.143129]).addTo(map)
-    .bindPopup("📍 Քիրս/Քարուտ/Կիրցք")
-    .openPopup();
-   L.marker([39.229574, 46.122919]).addTo(map)
-    .bindPopup("📍 Աջաբաջ")
-    .openPopup();
-   L.marker([39.219679, 46.122096]).addTo(map)
-    .bindPopup("📍 Կարդ")
-    .openPopup();
-    setTimeout(function () {
-  map.invalidateSize();
-}, 200);
+  function showInfo(title, text) {
+    document.getElementById("infoContent").innerHTML =
+      `<h4>${title}</h4><p>${text}</p>`;
+  }
+
+  function addMarker(lat, lng, title, text) {
+    L.marker([lat, lng]).addTo(map)
+      .bindPopup(title)
+      .on('click', function () {
+        showInfo(title, text);
+      });
+  }
+
+  addMarker(39.157322, 46.116828, "📍 Ողջի",
+    "Սյունիքի կարևոր գետերից է, ունի էկոլոգիական խնդիրներ։");
+
+  addMarker(39.149698, 46.099620, "📍 Քաջարանց",
+    "Տարածք Սյունիքում, հանքարդյունաբերական ազդեցությամբ։");
+
+  addMarker(39.155513, 46.093718, "📍 Կապուտջուղ",
+    "Հայաստանի բարձր լեռներից մեկը։");
+
+  addMarker(39.200428, 46.255468, "📍 Գեղի",
+    "Լեռնային գոտի։");
+
+  addMarker(39.238592, 46.143129, "📍 Քիրս",
+    "Տարածք Սյունիքում։");
+
+  addMarker(39.229574, 46.122919, "📍 Աջաբաջ",
+    "Բնակավայր Սյունիքում։");
+
+  addMarker(39.219679, 46.122096, "📍 Կարդ",
+    "Տեղանք Սյունիքում։");
+
+  setTimeout(function () {
+    map.invalidateSize();
+  }, 200);
 </script>
 
 </body>
